@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceEngineersMocks", "SpaceEngineersMocks\SpaceEngineersMocks.csproj", "{52E58CF5-9310-4F31-B52D-BC946552793F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceEngineerScripts", "SpaceEngineersDevEnvironment\SpaceEngineerScripts.csproj", "{B23F795F-A2FD-4422-A662-4FEAB5DC409A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52E58CF5-9310-4F31-B52D-BC946552793F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E58CF5-9310-4F31-B52D-BC946552793F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E58CF5-9310-4F31-B52D-BC946552793F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E58CF5-9310-4F31-B52D-BC946552793F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B23F795F-A2FD-4422-A662-4FEAB5DC409A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23F795F-A2FD-4422-A662-4FEAB5DC409A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23F795F-A2FD-4422-A662-4FEAB5DC409A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23F795F-A2FD-4422-A662-4FEAB5DC409A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
