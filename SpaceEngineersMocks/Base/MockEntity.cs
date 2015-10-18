@@ -12,26 +12,18 @@ using VRage.ObjectBuilders;
 using VRage.Utils;
 using VRageMath;
 
-namespace SpaceEngineersMocks
+namespace SpaceEngineersMocks.Base
 {
-    public class MockTerminalBlock : IMyTerminalBlock
+    /// <summary>
+    /// Mock for IMyEntity
+    /// Most methods in this class are forbidden in scripting and so do not need implementations
+    /// Any that do need implementations should be overridden in MockTerminalBlock instead
+    /// </summary>
+    public class MockEntity : IMyEntity
     {
-        
-        public MockTerminalBlock()
-        {
-            IsWorking = true;
-        }
 
-        // Interface Implementation
-
-        public SerializableDefinitionId BlockDefinition
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
+        //  Interface Implementation
+        // -----------------------------------------
         public bool CastShadows
         {
             get
@@ -40,14 +32,6 @@ namespace SpaceEngineersMocks
             }
 
             set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool CheckConnectionAllowed
-        {
-            get
             {
                 throw new NotImplementedException();
             }
@@ -69,62 +53,6 @@ namespace SpaceEngineersMocks
             }
         }
 
-        public IMyCubeGrid CubeGrid
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string CustomInfo
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string CustomName
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string CustomNameWithFaction
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string DefinitionDisplayNameText
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string DetailedInfo
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public float DisassembleRatio
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         public string DisplayName
         {
             get
@@ -133,14 +61,6 @@ namespace SpaceEngineersMocks
             }
 
             set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string DisplayNameText
-        {
-            get
             {
                 throw new NotImplementedException();
             }
@@ -232,23 +152,7 @@ namespace SpaceEngineersMocks
             }
         }
 
-        public bool IsBeingHacked
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         public bool IsCCDForProjectiles
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool IsFunctional
         {
             get
             {
@@ -263,8 +167,6 @@ namespace SpaceEngineersMocks
                 throw new NotImplementedException();
             }
         }
-
-        public bool IsWorking { get; set; }
 
         public BoundingBox LocalAABB
         {
@@ -342,31 +244,7 @@ namespace SpaceEngineersMocks
             }
         }
 
-        public float Mass
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public Vector3I Max
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         public float MaxGlassDistSq
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public Vector3I Min
         {
             get
             {
@@ -452,30 +330,6 @@ namespace SpaceEngineersMocks
             }
         }
 
-        public int NumberInGrid
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public MyBlockOrientation Orientation
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public long OwnerId
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         public IMyEntity Parent
         {
             get
@@ -505,14 +359,6 @@ namespace SpaceEngineersMocks
             }
 
             set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public Vector3I Position
-        {
-            get
             {
                 throw new NotImplementedException();
             }
@@ -565,14 +411,6 @@ namespace SpaceEngineersMocks
             }
 
             set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool ShowOnHUD
-        {
-            get
             {
                 throw new NotImplementedException();
             }
@@ -731,16 +569,6 @@ namespace SpaceEngineersMocks
             throw new NotImplementedException();
         }
 
-        public void GetActions(List<ITerminalAction> resultList, Func<ITerminalAction, bool> collect = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ITerminalAction GetActionWithName(string name)
-        {
-            throw new NotImplementedException();
-        }
-
         public void GetChildren(List<IMyEntity> children, Func<IMyEntity, bool> collect = null)
         {
             throw new NotImplementedException();
@@ -786,27 +614,7 @@ namespace SpaceEngineersMocks
             throw new NotImplementedException();
         }
 
-        public string GetOwnerFactionTag()
-        {
-            throw new NotImplementedException();
-        }
-
-        public MyRelationsBetweenPlayerAndBlock GetPlayerRelationToOwner()
-        {
-            throw new NotImplementedException();
-        }
-
         public Vector3D GetPosition()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetProperties(List<ITerminalProperty> resultList, Func<ITerminalProperty, bool> collect = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ITerminalProperty GetProperty(string id)
         {
             throw new NotImplementedException();
         }
@@ -826,27 +634,12 @@ namespace SpaceEngineersMocks
             throw new NotImplementedException();
         }
 
-        public MyRelationsBetweenPlayerAndBlock GetUserRelationToOwner(long playerId)
-        {
-            throw new NotImplementedException();
-        }
-
         public MatrixD GetViewMatrix()
         {
             throw new NotImplementedException();
         }
 
         public MatrixD GetWorldMatrixNormalizedInv()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool HasLocalPlayerAccess()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool HasPlayerAccess(long playerId)
         {
             throw new NotImplementedException();
         }
@@ -871,27 +664,7 @@ namespace SpaceEngineersMocks
             throw new NotImplementedException();
         }
 
-        public void RequestShowOnHUD(bool enable)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SearchActionsOfName(string name, List<ITerminalAction> resultList, Func<ITerminalAction, bool> collect = null)
-        {
-            throw new NotImplementedException();
-        }
-
         public void SetColorMaskForSubparts(Vector3 colorMaskHsv)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetCustomName(StringBuilder text)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetCustomName(string text)
         {
             throw new NotImplementedException();
         }
@@ -912,16 +685,6 @@ namespace SpaceEngineersMocks
         }
 
         public void UpdateGamePruningStructure()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateIsWorking()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateVisual()
         {
             throw new NotImplementedException();
         }

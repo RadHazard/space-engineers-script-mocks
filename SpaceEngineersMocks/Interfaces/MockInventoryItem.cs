@@ -12,7 +12,7 @@ using VRage.ObjectBuilders;
 using VRage.Utils;
 using VRageMath;
 
-namespace SpaceEngineersMocks
+namespace SpaceEngineersMocks.Interfaces
 {
     public class MockInventoryItem : IMyInventoryItem
     {
@@ -29,7 +29,8 @@ namespace SpaceEngineersMocks
 
         public float Mass { get { return amount * density; } }
 
-        // Interface Implementation
+        //  Interface Implementation
+        // -----------------------------------------
 
         public MyFixedPoint Amount
         {

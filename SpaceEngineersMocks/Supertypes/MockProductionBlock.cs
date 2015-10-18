@@ -5,19 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using Sandbox.Common;
 using Sandbox.ModAPI.Ingame;
+using Sandbox.ModAPI.Interfaces;
+using VRage.Components;
+using VRage.ModAPI;
+using VRage.ObjectBuilders;
+using VRage.Utils;
+using VRageMath;
 
-namespace SpaceEngineersMocks
+namespace SpaceEngineersMocks.Supertypes
 {
-    public class MockRefinery : MockInventoryOwner, IMyRefinery
+    /// <summary>
+    /// Base class for any block that can produce things
+    /// TODO
+    /// </summary>
+    public abstract class MockProductionBlock : MockFunctionalInventoryOwner, IMyProductionBlock
     {
-        /// <summary>
-        /// Creates a new Mock Refinery
-        /// </summary>
-        public MockRefinery() : base(2) { }
 
-        // Interface Implementation
+        public MockProductionBlock(int inventoryCount) : base(inventoryCount) { }
 
-        public bool Enabled { get; set; }
+        //  Interface Implementation
+        // -----------------------------------------
 
         public bool IsProducing
         {
@@ -42,18 +49,13 @@ namespace SpaceEngineersMocks
                 throw new NotImplementedException();
             }
         }
-
+        
         public void MoveQueueItemRequest(uint queueItemId, int targetIdx)
         {
             throw new NotImplementedException();
         }
 
         public void RemoveQueueItemRequest(int itemIdx)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RequestEnable(bool enable)
         {
             throw new NotImplementedException();
         }

@@ -9,8 +9,9 @@ using VRage.ModAPI;
 using VRage.ObjectBuilders;
 using VRage.Utils;
 using VRageMath;
+using SpaceEngineersMocks.Supertypes;
 
-namespace SpaceEngineersMocks
+namespace SpaceEngineersMocks.Interfaces
 {
     public class MockInventoryOwner : MockTerminalBlock, IMyInventoryOwner
     {
@@ -31,7 +32,7 @@ namespace SpaceEngineersMocks
         }
 
         /// <summary>
-        /// The same as GetInventory, but returns the MockInventory type to allow for easy mocking
+        /// The same as GetInventory, but returns the MockInventory type to allow access to mock methods.
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
@@ -47,8 +48,9 @@ namespace SpaceEngineersMocks
             }
         }
 
-        // Interface Implementation
-        
+        //  Interface Implementation
+        // -----------------------------------------
+
         public int InventoryCount
         {
             get { return inventories.Length; }

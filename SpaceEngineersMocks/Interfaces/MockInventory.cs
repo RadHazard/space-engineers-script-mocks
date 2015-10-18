@@ -12,7 +12,7 @@ using VRage.ObjectBuilders;
 using VRage.Utils;
 using VRageMath;
 
-namespace SpaceEngineersMocks
+namespace SpaceEngineersMocks.Interfaces
 {
     public class MockInventory : IMyInventory
     {
@@ -34,7 +34,8 @@ namespace SpaceEngineersMocks
             items.Add(item);
         }
 
-        // Interface Implementation
+        //  Interface Implementation
+        // -----------------------------------------
 
         public MyFixedPoint CurrentMass
         {

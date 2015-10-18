@@ -5,24 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using Sandbox.ModAPI.Ingame;
 
-namespace SpaceEngineersMocks
+namespace SpaceEngineersMocks.Base
 {
+    /// <summary>
+    /// The mock for the GridTerminalSystem
+    /// </summary>
     public class MockGridTerminalSystem : IMyGridTerminalSystem
     {
 
-        private List<IMyTerminalBlock> _blocks;
+        private List<IMyTerminalBlock> blocks;
 
         public MockGridTerminalSystem()
         {
-            _blocks = new List<IMyTerminalBlock>();
+            blocks = new List<IMyTerminalBlock>();
         }
 
+        /// <summary>
+        /// Registers a mock block with this terminal system
+        /// </summary>
+        /// <param name="block">The block to register</param>
         public void RegisterBlock(IMyTerminalBlock block)
         {
-            _blocks.Add(block);
+            blocks.Add(block);
         }
 
-        // Interface Implementation
+        //  Interface Implementation
+        // -----------------------------------------
 
         public void GetBlockGroups(List<IMyBlockGroup> blockGroups)
         {
@@ -31,12 +39,12 @@ namespace SpaceEngineersMocks
 
         public void GetBlocks(List<IMyTerminalBlock> blocks)
         {
-            blocks.AddList(_blocks);
+            blocks.AddList(this.blocks);
         }
 
         public void GetBlocksOfType<T>(List<IMyTerminalBlock> blocks, Func<IMyTerminalBlock, bool> collect = null)
         {
-            foreach (var block in _blocks)
+            foreach (var block in this.blocks)
             {
                 if (block is T)
                 {
