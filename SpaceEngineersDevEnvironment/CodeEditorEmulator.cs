@@ -7,7 +7,7 @@ using Sandbox.ModAPI.Ingame;
 using Sandbox.ModAPI.Interfaces;
 using SpaceEngineersMocks;
 using SpaceEngineersMocks.Base;
-using SpaceEngineersMocks.Ingame;
+using SpaceEngineersMocks.Blocks;
 using SpaceEngineersMocks.Interfaces;
 
 namespace SpaceEngineersScripts
@@ -54,7 +54,10 @@ namespace SpaceEngineersScripts
 
 
         #region CodeEditor
-        
+        void Main()
+        {
+
+        }
         #endregion
     }
 }
